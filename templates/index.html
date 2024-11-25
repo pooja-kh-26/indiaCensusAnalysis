@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: Serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #B17457;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #212121;
+        }
+        .chart-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #FAF7F0;
+
+        }
+        .chart-container {
+            max-width: 1500px;  /* Adjust this to control max width */
+            margin: 0 auto;     /* Center align */
+        }
+        img {
+            width: 90%;       /* Make the image responsive */
+            height: auto;      /* Maintain aspect ratio */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Population Analysis Dashboard</h1>
+
+    <!-- Gender Distribution Pie Chart -->
+    <div class="chart-container">
+        <div class="chart-title">Gender Distribution in Population</div>
+        <img src="data:image/png;base64,{{ gender_chart }}" alt="Gender Distribution Pie Chart">
+    </div>
+    <br/>
+
+    <!-- Rural vs Urban Population Distribution -->
+    <div class="chart-container">
+        <div class="chart-title">Rural vs Urban Population Distribution by State</div>
+        <img src="data:image/png;base64,{{ urban_rural_chart }}" alt="Rural vs Urban Population Distribution">
+    </div>
+
+    <!-- Population Density Distribution -->
+    <div class="chart-container">
+        <div class="chart-title">Distribution of Population Density Across States</div>
+        <img src="data:image/png;base64,{{ density_chart }}" alt="Population Density Distribution">
+    </div>
+
+    <!-- Correlation Heatmap -->
+    <div class="chart-container">
+        <div class="chart-title">Correlation Heatmap of Selected Population Factors</div>
+        <img src="data:image/png;base64,{{ heatmap_chart }}" alt="Correlation Heatmap">
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Total Population by Category</div>
+        <img src="data:image/png;base64,{{ column_chart }}" alt="Column Chart for Males, Females, Urban, and Rural Population">
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Top 10 States by Highest Decadal Growth (%)</div>
+        <img src="data:image/png;base64,{{ pie_chart }}" alt="Top 10 States by Decadal Growth Pie Chart">
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Population by State</div>
+        <img src="data:image/png;base64,{{ line_chart }}" alt="Population by State Line Chart">
+    </div>
+</body>
+</html>
