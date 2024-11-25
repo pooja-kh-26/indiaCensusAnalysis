@@ -163,4 +163,4 @@ def index():
                            column_chart=column_chart,pie_chart=pie_chart,line_chart=line_chart)
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)
