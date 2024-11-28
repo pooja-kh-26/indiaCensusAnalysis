@@ -46,7 +46,7 @@ def generate_dashboard():
     plt.xticks(rotation=90)
     plt.title("Rural vs Urban Population Distribution by State")
     plt.ylabel("Population (%)")
-    plt.legend()
+    plt.legend(fontsize=20)
     urban_rural_img = io.BytesIO()
     plt.savefig(urban_rural_img, format='png')
     plt.close()
